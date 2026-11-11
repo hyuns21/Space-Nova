@@ -380,55 +380,55 @@ const CONFIG = {
       //   playTime              : null = baseTime/timeGrowth 로 자동 계산 / 숫자(초) = 이 스테이지만 직접 지정
 	  
 	  
-	 // ── 은하 한 개의 구성 ─────────────────────────────────────────────	  
+	 // ── 1 은하 한 개의 구성 ─────────────────────────────────────────────	  
 	  
       { name:'오리온 나선은하', type:'spiral', color:'#6fb4ff',
         power:{ spawnRate:1.5 },   // ★ 첫 번째 은하: 일반 적 등장 1.5배
-        bossHpMul: 2, bossMoveMul: 2, enemyMoveMul: 1.4,   // ★ 이 은하만: 보스 체력 2배, 보스 이동 2배, 일반 적 이동 2배 (없으면 1)
+        bossHpMul: 1, bossMoveMul: 2, enemyMoveMul: 1.4,   // ★ 이 은하만: 보스 체력 2배, 보스 이동 2배, 일반 적 이동 2배 (없으면 1)
         list: [
       
 	  // 1스테이지
 	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBossHp:10, midBosses:[ {type:1, count:3} ],
-        itemDropChance:0.03, escortItemDropChance:0.2,
-        stageBossHp:80, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null }, 
+        itemDropChance:0.024, escortItemDropChance:0.2,
+        stageBossHp:120, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null }, 
 	  
 	  // 2스테이지
 	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBossHp:10, midBosses:[ {type:1, count:3} ],
-        itemDropChance:0.025, escortItemDropChance:0.12,
-        stageBossHp:100, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null },		
+        itemDropChance:0.025, escortItemDropChance:0.2,
+        stageBossHp:150, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null },		
 	
 	// 3스테이지	
       { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.95, enemyBulletSpeedMul:1.05, spawnIntervalMul:0.95, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:140, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'01', bgSpeed:30, playTime:null ,
+        itemDropChance:0.024, escortItemDropChance:0.3,
+        stageBossHp:180, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'01', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },      
       },		
 
 	//4스테이지	  
       { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.9, enemyBulletSpeedMul:1.1, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:180, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+        itemDropChance:0.024, escortItemDropChance:0.3,
+        stageBossHp:220, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
       },		
      
 	 // 5스테이지
-	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.85, enemyBulletSpeedMul:1.15, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:220, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.85, enemyBulletSpeedMul:1.15, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2} ],
+        itemDropChance:0.024, escortItemDropChance:0.2,
+        stageBossHp:250, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },      
      },
 						     
 	// 6스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.8, enemyBulletSpeedMul:1.2, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:360, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.8, enemyBulletSpeedMul:1.2, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:1} ],
+        itemDropChance:0.024, escortItemDropChance:0.2,
+        stageBossHp:300, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
      
 	 // 7스테이지
-	 { desc:'오리온 나선은하 최종스테이지', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:400, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'오리온 나선은하 최종스테이지', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:340, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'B03A', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
@@ -438,15 +438,15 @@ const CONFIG = {
 		
 		
 		
-	 // ── 은하 한 개의 구성 ─────────────────────────────────────────────
+	 // ── 2 은하 한 개의 구성 ─────────────────────────────────────────────
 			  
 			  
 		
       { name:'베가 막대나선은하', type:'barred', color:'#b48cff',
         power:{ enemyHp:1.5, bossHp:1, bulletSpeed:1.05, fireRate:1.10, spawnRate:1.05 },   // ★ 은하 난이도 곡선 1 → 1.5 → 2.1 → 2.8 → 3.6
         // ★ 이 은하의 운석 설정 (스테이지 순서대로). 은하마다 스테이지별로 따로 정함. 첫 번째 은하는 공통 설정(meteors.spawnInterval·availability)을 씀
-        meteorInterval: [7, 7, 7, 7, 7, 6.5, 5.5, 5, 4.5, 4],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
-        helixWaves: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
+        meteorInterval: [3, 3, 3, 4, 4, 4, 4, 4, 4, 4],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
+        helixWaves: [0, 1, 1, 1, 1, 2, 2, 2, 2, 2],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
         meteorAvailability: { L1: [ true, true, true,  true,  true,  true,  true,  true,  false,  false ], 
 		                      L2: [ true, true, true, true,  true,  true,  true,  true,  false,  false ], 
 							  L3: [ false, false, true, true, true, true, true,  true,  true,  true ], 
@@ -455,58 +455,58 @@ const CONFIG = {
         list: [
       
 	  // 1스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.03, escortItemDropChance:0.2,
-        stageBossHp:320, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B04B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'02', bgSpeed:30, playTime:null , 
+	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:1 , midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:1} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:300, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B04B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'02', bgSpeed:30, playTime:null , 
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },        
      },
 	  
 	  // 2스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.025, escortItemDropChance:0.12,
-        stageBossHp:360, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B04R', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'02', bgSpeed:30, playTime:null ,	
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:1, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:400, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B04R', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'02', bgSpeed:30, playTime:null ,	
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },          
      },		
 	
 	// 3스테이지	
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.95, enemyBulletSpeedMul:1.05, spawnIntervalMul:0.95, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:400, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B05B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:1, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:450, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B05B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },          
       },		
 
 	//4스테이지	  
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.9, enemyBulletSpeedMul:1.1, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:440, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B05R', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:500, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B05R', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },           
       },		
      
 	 // 5스테이지
-	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.85, enemyBulletSpeedMul:1.15, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:480, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B06B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:550, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B06B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },    
 	 },
 						     
 	// 6스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.8, enemyBulletSpeedMul:1.2, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:520, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B06R', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:600, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B06R', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },         
      },
      
 	 // 7스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:560, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B07B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:650, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B07B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },    
 	 
 	 // 8스테이지
-	 { desc:'베가 막대나선은하 최종스테이지', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.7, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:600, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'B07R', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'베가 막대나선은하 최종스테이지', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:700, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'B07R', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
 		stageBossExtras:[                                                     
           { trigger:'hpLost',  value:0.3, of:0, sprite:'B07B', hpMul:0.8, scale:1, skills:['lightBeam'] },   // 최종 스테이지: 푸른색 보스가 붉은색 보스와 함께 등장
@@ -515,14 +515,14 @@ const CONFIG = {
         ] },
 
 		
-	 // ── 은하 한 개의 구성 ─────────────────────────────────────────────		
+	 // ── 3 은하 한 개의 구성 ─────────────────────────────────────────────		
 		
 		
       { name:'타우 고리은하 ', type:'ring', color:'#4fe0c8',
         power:{ enemyHp:2.1, bossHp:1, bulletSpeed:1.10, fireRate:1.20, spawnRate:1.10, dropRate:1.1 },
         // ★ 이 은하의 운석 설정 (스테이지 순서대로). 은하마다 스테이지별로 따로 정함. 첫 번째 은하는 공통 설정(meteors.spawnInterval·availability)을 씀
-        meteorInterval: [7, 7, 7, 7, 7, 6.5, 5.5, 5, 4.5, 4],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
-        helixWaves: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
+        meteorInterval: [4, 4, 4, 4, 4, 4, 5, 5, 5, 5],  // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
+        helixWaves: [1, 1, 1, 1, 2, 2, 2, 2, 2, 2],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
         meteorAvailability: { L1: [ false, false, false,  false,  false,  false,  false,  false,  false,  false ], 
 		                      L2: [ true, true, true, true,  true,  true,  true,  true,  true,  true ], 
 							  L3: [ true, true, true, true, true, true, true,  true,  true,  true ], 
@@ -531,82 +531,84 @@ const CONFIG = {
         list: [
       
 	  // 1스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.03, escortItemDropChance:0.2,
-        stageBossHp:360, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'03', bgSpeed:30, playTime:null , 
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:600, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'03', bgSpeed:30, playTime:null , 
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
 	  
 	  // 2스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.025, escortItemDropChance:0.12,
-        stageBossHp:400, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'03', bgSpeed:30, playTime:null,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:620, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'03', bgSpeed:30, playTime:null,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },		
 	
 	// 3스테이지	
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.95, enemyBulletSpeedMul:1.05, spawnIntervalMul:0.95, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:440, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:650, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'03', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
       },		
 
 	//4스테이지	  
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.9, enemyBulletSpeedMul:1.1, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:480, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:680, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
       },		
      
 	 // 5스테이지
-	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.85, enemyBulletSpeedMul:1.15, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:520, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:700, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },      
      },
 						     
 	// 6스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.8, enemyBulletSpeedMul:1.2, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:560, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:720, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
      },
      
 	 // 7스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:600, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:750, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },    
 	 
 	 // 8스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.7, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:650, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:780, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },      
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
-          { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
+        //  { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
         //  { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
      
 	 // 9스테이지
-	 { desc:'타우 고리은하 최종스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.65, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.16,
-        stageBossHp:700, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'타우 고리은하 최종스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:800, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       // 테스트: 돌진 중 발사·충돌 가능
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
-          { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
+        //  { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
         ] },
 		
-		
+	
+	// ── 4 은하 한 개의 구성 ─────────────────────────────────────────────		
+	
 		
       { name:'시그마 타원은하', type:'elliptical', color:'#ffc66b', color2:'#ff7a4a', arms:2, twist:3.0, armLength:1.0,  tail:1.0,
         power:{ enemyHp:2.8, bossHp:1, bulletSpeed:1.15, fireRate:1.30, spawnRate:1.15, dropRate:1.2 },
         // ★ 이 은하의 운석 설정 (스테이지 순서대로). 은하마다 스테이지별로 따로 정함. 첫 번째 은하는 공통 설정(meteors.spawnInterval·availability)을 씀
-        meteorInterval: [0, 0, 8, 7.5, 7, 6.5, 5.5, 5, 4.5, 4],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
-        helixWaves: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
+        meteorInterval: [4, 4, 4, 5, 5, 5, 5, 5, 5, 5],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
+        helixWaves: [2, 2, 2, 2, 2, 2, 3, 3, 3, 3],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
         meteorAvailability: 
 		{ 
 		L1: [ false, false, false,  false,  false,  false,  false,  false,  false,  false ], 
@@ -617,89 +619,92 @@ const CONFIG = {
         list: [
       
 	  // 1스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.03, escortItemDropChance:0.2,
-        stageBossHp:400, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null , 
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:1} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:700, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null , 
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
 	  
 	  // 2스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.025, escortItemDropChance:0.12,
-        stageBossHp:440, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:730, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },		
 	
 	// 3스테이지	
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.95, enemyBulletSpeedMul:1.05, spawnIntervalMul:0.95, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:480, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:770, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
       },		
 
 	//4스테이지	  
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.9, enemyBulletSpeedMul:1.1, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:520, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:800, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
       },		
      
 	 // 5스테이지
-	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.85, enemyBulletSpeedMul:1.15, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:560, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:830, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
 						     
 	// 6스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.8, enemyBulletSpeedMul:1.2, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:600, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:870, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },    
      },
      
 	 // 7스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:650, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:900, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
      },    
 	 
 	 // 8스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.7, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:1} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:700, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:930, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true }},    
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
-          { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
+        //  { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
         //  { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
      
 	 // 9스테이지
-	 { desc:'', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.65, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.16,
-        stageBossHp:750, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:970, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true }},   
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
-          { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
+     // { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
      // 10스테이지
-	 { desc:'시그마 타원은하 최종스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.6, enemyBulletSpeedMul:1.4, spawnIntervalMul:0.6, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.16,
-        stageBossHp:800, stageBossFireInterval:1.0, stageBossShots:9, stageBossBulletSpeed:270, stageBossMoveSpeed:0.75, escortInterval:1.5, stageBossSprite:'D2', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'시그마 타원은하 최종스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.6, enemyBulletSpeedMul:1.4, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1000, stageBossFireInterval:1.0, stageBossShots:9, stageBossBulletSpeed:270, stageBossMoveSpeed:0.75, escortInterval:1.5, stageBossSprite:'D2', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex'], bgImage:'01', bgSpeed:30, playTime:null ,
 		        stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
-          { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
+    //    { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
-        ] },
+        ] },		
 		
-		
+
+	// ── 5 은하 한 개의 구성 ─────────────────────────────────────────────			
 		
 		
       { name:'네메시스 불규칙은하', type:'irregular', color:'#ff7a6a', color2:'#ffe27a', arms:2, twist:3.0, armLength:1.0,  tail:0.75,
         power:{ enemyHp:3.6, bossHp:1, bulletSpeed:1.20, fireRate:1.40, spawnRate:1.20, dropRate:1.3 },
         // ★ 이 은하의 운석 설정 (스테이지 순서대로). 은하마다 스테이지별로 따로 정함. 첫 번째 은하는 공통 설정(meteors.spawnInterval·availability)을 씀
-        meteorInterval: [0, 0, 8, 7.5, 7, 6.5, 5.5, 5, 4.5, 4],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
-        helixWaves: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
+        meteorInterval: [5, 5, 5, 5, 6, 6, 6, 6, 6, 6],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
+        helixWaves: [2, 2, 2, 3, 3, 3, 3, 3, 3, 3],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
         meteorAvailability: { 
 		L1: [ false, false, false,  false,  false,  false,  false,  false,  false,  false ], 
 		L2: [ false, false, false, false,  false,  false,  false,  false,  false,  false ], 
@@ -709,88 +714,92 @@ const CONFIG = {
         list: [
       
 	  // 1스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.03, escortItemDropChance:0.2,
-        stageBossHp:500, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null , 
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:800, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null , 
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
 	  
 	  // 2스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.025, escortItemDropChance:0.12,
-        stageBossHp:550, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null,	
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:850, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null,	
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },		
 	
 	// 3스테이지	
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.95, enemyBulletSpeedMul:1.05, spawnIntervalMul:0.95, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:600, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:900, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
       },		
 
 	//4스테이지	  
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.9, enemyBulletSpeedMul:1.1, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:650, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:950, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
       },		
      
 	 // 5스테이지
-	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.85, enemyBulletSpeedMul:1.15, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:700, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1000, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
 						     
 	// 6스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.8, enemyBulletSpeedMul:1.2, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:750, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:2, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1050, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },      
      },
      
 	 // 7스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:800, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },    
 	 
 	 // 8스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.7, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:850, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
-          { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
+         // { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
         //  { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
      
 	 // 9스테이지
-	 { desc:'', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.65, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.16,
-        stageBossHp:900, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
-          { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
+       // { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
      // 10스테이지
-	 { desc:'네메시스 불규칙은하 최종 스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.6, enemyBulletSpeedMul:1.4, spawnIntervalMul:0.6, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.16,
-        stageBossHp:1000, stageBossFireInterval:1.0, stageBossShots:9, stageBossBulletSpeed:270, stageBossMoveSpeed:0.75, escortInterval:1.5, stageBossSprite:'D2', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex'], bgImage:'01', bgSpeed:30, playTime:null ,
-		        stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
+	 { desc:'네메시스 불규칙은하 최종 스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.6, enemyBulletSpeedMul:1.4, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.0, stageBossShots:9, stageBossBulletSpeed:270, stageBossMoveSpeed:0.75, escortInterval:1.5, stageBossSprite:'D2', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex'], bgImage:'01', bgSpeed:30, playTime:null ,
+		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
+        stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
           { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
         ] },
 		
+	
+	// ── 6은하 한 개의 구성 ─────────────────────────────────────────────		
 		
 		
 	  { name:'뉴 안드로메다 은하', type:'irregular', color:'#ff7a6a', color2:'#ffe27a', arms:2, twist:3.0, armLength:1.0,  tail:0.75,
         power:{ enemyHp:3.6, bossHp:1, bulletSpeed:1.20, fireRate:1.40, spawnRate:1.20, dropRate:1.3 },
         // ★ 이 은하의 운석 설정 (스테이지 순서대로). 은하마다 스테이지별로 따로 정함. 첫 번째 은하는 공통 설정(meteors.spawnInterval·availability)을 씀
-        meteorInterval: [0, 0, 8, 7.5, 7, 6.5, 5.5, 5, 4.5, 4],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
-        helixWaves: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
+        meteorInterval: [5, 5, 6, 6, 6, 6, 6, 6, 6, 6],   // 스테이지별 유성 생성 간격(초). 0 = 그 스테이지에는 유성 없음
+        helixWaves: [2, 2, 2, 3, 3, 3, 3, 3, 3, 3],                // ★ 스테이지별 교차 라인 편대(enemyHelix) 등장 횟수. 0 = 그 스테이지에는 안 나옴
         meteorAvailability: { 
 		L1: [ false, false, false,  false,  false,  false,  false,  false,  false,  false ], 
 		L2: [ false, false, false, false,  false,  false,  false,  false,  false,  false ], 
@@ -800,82 +809,87 @@ const CONFIG = {
         list: [
       
 	  // 1스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.03, escortItemDropChance:0.2,
-        stageBossHp:500, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null , 
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:800, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.5625, escortInterval:3.5, stageBossSprite:'B01B', stageBossScale:1.2, stageBossSkills:[ ], bgImage:'01', bgSpeed:30, playTime:null , 
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
 	  
 	  // 2스테이지
-	  { desc:'', enemySpeedMul:1.1, enemyFireIntervalMul:1.0, enemyBulletSpeedMul:1.0, spawnIntervalMul:1.0, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.025, escortItemDropChance:0.12,
-        stageBossHp:550, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null,	
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:850, stageBossFireInterval:2, stageBossShots:4, stageBossBulletSpeed:200, stageBossMoveSpeed:0.6, escortInterval:3.2, stageBossSprite:'B01A', stageBossScale:1.2, stageBossSkills:['fanBurst'], bgImage:'01', bgSpeed:30, playTime:null,	
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },		
 	
 	// 3스테이지	
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.95, enemyBulletSpeedMul:1.05, spawnIntervalMul:0.95, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:600, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:900, stageBossFireInterval:1.6, stageBossShots:3, stageBossBulletSpeed:230, stageBossMoveSpeed:0.5, escortInterval:3.0, stageBossSprite:'B02B', stageBossScale:1.2, stageBossSkills:[ 'fanBurst','sweepStream','diveAttack' ], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
       },		
 
 	//4스테이지	  
-      { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.9, enemyBulletSpeedMul:1.1, spawnIntervalMul:0.9, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.13,
-        stageBossHp:650, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:950, stageBossFireInterval:1.5, stageBossShots:5, stageBossBulletSpeed:235, stageBossMoveSpeed:0.53, escortInterval:2.8, stageBossSprite:'B02A', stageBossScale:1.2, stageBossSkills:[ 'fanBurst', 'sweepStream' ,'diveAttack'], bgImage:'02', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
       },		
      
 	 // 5스테이지
-	 { desc:'', enemySpeedMul:1.2, enemyFireIntervalMul:0.85, enemyBulletSpeedMul:1.15, spawnIntervalMul:0.85, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:700, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1000, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:240, stageBossMoveSpeed:0.56, escortInterval:2.5, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'sweepStream','fireVortex','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
 		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },
 						     
 	// 6스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.8, enemyBulletSpeedMul:1.2, spawnIntervalMul:0.8, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.024, escortItemDropChance:0.14,
-        stageBossHp:750, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1050, stageBossFireInterval:1.4, stageBossShots:5, stageBossBulletSpeed:245, stageBossMoveSpeed:0.6, escortInterval:2.3, stageBossSprite:'B03A', stageBossSkills:['fanBurst', 'fireVortex', 'sweepStream','diveAttack'], bgImage:'A', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },      
      },
      
 	 // 7스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:800, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.75, enemyBulletSpeedMul:1.25, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:250, stageBossMoveSpeed:0.63, escortInterval:2.1, stageBossSprite:'B03B', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
  		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },       
      },    
 	 
 	 // 8스테이지
-	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.7, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.15,
-        stageBossHp:850, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.3, enemyFireIntervalMul:0.7, enemyBulletSpeedMul:1.3, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.3, stageBossShots:7, stageBossBulletSpeed:255, stageBossMoveSpeed:0.66, escortInterval:1.9, stageBossSprite:'C2', stageBossSkills:['fanBurst', 'lightBeam' ,'sweepStream', 'fireVortex','diveAttack'], bgImage:'03', bgSpeed:30, playTime:null ,
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
         //  { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
      
 	 // 9스테이지
-	 { desc:'', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.65, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.16,
-        stageBossHp:900, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+	 { desc:'', enemySpeedMul:1.5, enemyFireIntervalMul:0.65, enemyBulletSpeedMul:1.35, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:2}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.2, stageBossShots:7, stageBossBulletSpeed:260, stageBossMoveSpeed:0.7, escortInterval:1.7, stageBossSprite:'D', stageBossSkills:['fanBurst', 'lightBeam','sweepStream' , 'fireVortex','diveAttack'], bgImage:'01', bgSpeed:30, playTime:null ,
+		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
 		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
           { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
      // 10스테이지
-	 { desc:'뉴 안드로메다 은하 최종 스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.6, enemyBulletSpeedMul:1.4, spawnIntervalMul:0.6, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:1}, {type:3, count:2} ],
-        itemDropChance:0.02, escortItemDropChance:0.16,
-        stageBossHp:1000, stageBossFireInterval:1.0, stageBossShots:9, stageBossBulletSpeed:270, stageBossMoveSpeed:0.75, escortInterval:1.5, stageBossSprite:'D2', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex'], bgImage:'01', bgSpeed:30, playTime:null ,
-		        stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
+	 { desc:'뉴 안드로메다 은하 최종 스테이지', enemySpeedMul:1.5, enemyFireIntervalMul:0.6, enemyBulletSpeedMul:1.4, spawnIntervalMul:0.75, midBossHp:10, midBosses:[ {type:1, count:1}, {type:2, count:2}, {type:3, count:2} ],
+        itemDropChance:0.02, escortItemDropChance:0.2,
+        stageBossHp:1100, stageBossFireInterval:1.0, stageBossShots:9, stageBossBulletSpeed:270, stageBossMoveSpeed:0.75, escortInterval:1.5, stageBossSprite:'D2', stageBossSkills:['fanBurst', 'lightBeam','sweepStream', 'fireVortex'], bgImage:'01', bgSpeed:30, playTime:null ,
+		stageBossSkillOptions:{ diveAttack:{ fire:true, collide:true } },     
+		stageBossExtras:[                                                        // 테스트: 보스 3마리 (1스테이지)
           { trigger:'hpLost',  value:0.3, of:0, sprite:'A2', hpMul:0.8, scale:0.85, skills:['lightBeam'] },   // 첫 보스가 체력 30% 이상 잃으면 두 번째 보스 등장
           { trigger:'bossDead', of:0,         sprite:'B',  hpMul:0.8, scale:0.85, skills:['fireVortex'] },  // 첫 보스가 파괴되면 세 번째 보스 등장
         ] },
         ] },
 		
     ],
+	
+	
+	
 	
     itemDropFromFirstGalaxy: true,   // ★ true = 두 번째 은하부터는 아이템 종류(itemAvailability)와 드랍 확률(itemDropChance·escortItemDropChance)을 '첫 번째 은하의 마지막 스테이지 값'으로 계속 씀 / false = 은하마다 자기 값을 씀
     galaxyClearGems: 5,              // ★ 은하의 마지막 스테이지를 처음 클리어했을 때 보상으로 받는 보석(잼) 수 (결과창에 은하 클리어 축하 메시지와 함께 나옴)
@@ -1356,10 +1370,10 @@ const CONFIG = {
     swayFrequency: 1.2,      // 좌우 이동 빈도 (클수록 빠름). 스테이지 적 속도 배율이 곱해짐
     fireDelay: 0.8,          // 화면에 나온 뒤 첫 발사까지 걸리는 시간 (초)
     fireInterval: 0.8,       // 발사 간격 (초). 스테이지 발사 간격 배율이 곱해짐
-    bulletSpeed: 220,        // 발사체 속도 (px/초). 스테이지 발사체 속도 배율이 곱해짐
+    bulletSpeed: 210,        // 발사체 속도 (px/초). 스테이지 발사체 속도 배율이 곱해짐
     bulletRadius: 6,         // 발사체 크기 (px)
     shots: 3,                // 한 번에 쏘는 발사체 개수 (부채꼴)
-    spreadAngle: 12,         // 여러 발을 쏠 때 발사체 사이 각도 (도)
+    spreadAngle: 14,         // 여러 발을 쏠 때 발사체 사이 각도 (도)
     dropItem: 'random',      // 파괴 시 드롭하는 아이템 ('random' = 랜덤 / 'S' 'M' 'B' 등 고정 / '' = 없음)
   },
   
@@ -1497,7 +1511,7 @@ const CONFIG = {
       width: 82,             //   ★ 빛줄기 가로 폭 (px). 96 → 82 (15% 줄임, 피해 범위도 같이 줄어듦)
       tick: 0.12,            //   ★ 빛줄기에 닿아 있는 동안 방어력이 1단위씩 사라지는 간격 (초). 닿는 순간 첫 1단위가 바로 사라지고 이후 이 간격마다 사라짐
       tickDamage: 1,         //   ★ 간격마다 사라지는 방어력 단위 수 (방어 아이템 1회·사이드 유도탄 1개·우주선 자체 방어력 1회가 각 1단위). 방어력이 없으면 닿는 순간 우주선 파괴
-      bossMoveMul: 0.3,      //   스킬 사용 중 보스의 좌우 이동 속도 배율 (기본 공격은 멈춤)
+      bossMoveMul: 0.2,      //   스킬 사용 중 보스의 좌우 이동 속도 배율 (기본 공격은 멈춤)
       color: [255, 90, 140], //   빛줄기 색 [R, G, B]
       flashSize: 2.0,        //   발사 지점의 번쩍이는 빛(flash_01.png) 크기 (빛줄기 폭의 배수)
       flashSpin: 0.6,        //   발사 지점 빛의 회전 속도 (라디안/초, 천천히)
